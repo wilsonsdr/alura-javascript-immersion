@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imersão Dev da Alura - Conversor de Moedas, Temperatura e Quilometros</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div>
+      <h1 class="subtitulo">Conversor</h1>
+    </div>
+
+    <div class="conteudo-principal">
+
+      <div class="item moedas">
+        <div>
+          <h2>Moeda</h2>
+        </div>
+        <div>
+          <div>
+            <form action="#">
+              <label for="">Valor a ser convertido:</label>
+              <input type="text" name="valor" id="valor">
+            </form>
+          </div>
+          <div class="conversor-moedas">
+            <div>
+              <form action="#">
+                <label>De</label>
+                <select id="seletor1">
+                  <option value="real">Real</option>
+                  <option value="dolar">Dolar</option>
+                  <option value="euro">Euro</option>
+                </select>
+              </form>
+            </div>
+            <div>
+              <form action="#">
+                <label>Para</label>
+                <select id="seletor2">
+                  <option value="real">Real</option>
+                  <option value="dolar">Dolar</option>
+                  <option value="euro">Euro</option>
+                </select>
+              </form>
+            </div>
+            <button class="botao" type="submit" onclick="converter()">Converter</button>
+            <button class="botao" type="reset" onclick="resetar()">Resetar</button>
+            <h4 id="resultado"></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="item temperatura">
+        <h2>Temperatura</h2>
+      </div>
+
+      <div class="item quilometros">
+        <h2>Quilometros</h2>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./js/conversorMoeda.js"></script>
+</body>
+
+</html>
