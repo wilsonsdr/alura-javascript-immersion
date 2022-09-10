@@ -2,10 +2,21 @@
 
 # Descrição do projeto
 
-- Este é o projeto da aula 01 - Imersão Dev da Alura.
+- Este é o projeto da aula 01 - Imersão Dev da Alura;
 
-- A ideia do projeto é desenvolver uma calculadora de média e um conversor de temperaturas.
-
-- O design da página desenvolvi com base no terminal do Mint, que serviu de inspiração.
+- A ideia do projeto é desenvolver uma calculadora de média e um conversor de temperaturas;
 
 - Todo o foco do projeto é voltado para JavaScript.
+
+# Desafio do projeto
+
+- Dependendo da nota, mostrar se o(a) aluno(a) foi aprovado(a) ou não;
+
+- Alterar o layout da página da maneira que achar mais legal;
+
+- Imprimir na própria página o resultado, ao invés do console;
+
+- Criar um conversor de temperaturas entre Farenheit e Celcius;
+
+- Colocar a conta inteira da média em apenas uma linha.
+
