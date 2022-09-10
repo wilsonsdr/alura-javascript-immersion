@@ -27,14 +27,14 @@
           <div>
             <form action="#">
               <label for="">Valor a ser convertido:</label>
-              <input type="text" name="valor" id="valor">
+              <input type="text" name="valor" id="valorMoeda">
             </form>
           </div>
           <div class="conversor-moedas">
             <div>
               <form action="#">
                 <label>De</label>
-                <select id="seletor1">
+                <select id="seletorMoeda1">
                   <option value="real">Real</option>
                   <option value="dolar">Dolar</option>
                   <option value="euro">Euro</option>
@@ -44,7 +44,7 @@
             <div>
               <form action="#">
                 <label>Para</label>
-                <select id="seletor2">
+                <select id="seletorMoeda2">
                   <option value="real">Real</option>
                   <option value="dolar">Dolar</option>
                   <option value="euro">Euro</option>
@@ -53,7 +53,7 @@
             </div>
             <button class="botao" type="submit" onclick="converter()">Converter</button>
             <button class="botao" type="reset" onclick="resetar()">Resetar</button>
-            <h4 id="resultado"></h4>
+            <h4 id="resultadoMoeda"></h4>
           </div>
         </div>
       </div>

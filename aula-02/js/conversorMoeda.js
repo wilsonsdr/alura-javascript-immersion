@@ -1,11 +1,11 @@
 function converter() {
-  const valorElemento = document.getElementById("valor");
-  const valor = valorElemento.value;
-  const valorConversao = Number(valor);
+  const valorElemento = document.getElementById("valorMoeda");
+  const valorMoeda = valorElemento.value;
+  const valorConversao = Number(valorMoeda);
 
-  const seletorMoeda1 = document.getElementById("seletor1");
+  const seletorMoeda1 = document.getElementById("seletorMoeda1");
   const opcoesMoeda1 = seletorMoeda1.value;
-  const seletorMoeda2 = document.getElementById("seletor2");
+  const seletorMoeda2 = document.getElementById("seletorMoeda2");
   const opcoesMoeda2 = seletorMoeda2.value;
 
   let dolar = 5.15;
@@ -17,7 +17,7 @@ function converter() {
   if (igual == true) {
     igual = valorConversao * 1;
     document.getElementById(
-      "resultado"
+      "resultadoMoeda"
     ).innerHTML = `A conversão de ${opcoesMoeda1} para ${opcoesMoeda2} é de: ${igual}`;
   } else {
     switch (diferente) {
@@ -41,7 +41,7 @@ function converter() {
         break;
     }
     document.getElementById(
-      "resultado"
+      "resultadoMoeda"
     ).innerHTML = `A conversão de ${opcoesMoeda1} para ${opcoesMoeda2} é de: ${igual.toFixed(
       2
     )}`;
@@ -49,8 +49,8 @@ function converter() {
 }
 
 function resetar() {
-  document.getElementById("valor").value = ""; // deixa a caixa de valor em branco
-  document.getElementById("resultado").innerHTML = ""; // remove o resultado
-  document.getElementById("seletor1").selectedIndex = "0"; // seleciona o index 0
-  document.getElementById("seletor2").selectedIndex = "0";
+  document.getElementById("valorMoeda").value = ""; // deixa a caixa de valor em branco
+  document.getElementById("resultadoMoeda").innerHTML = ""; // remove o resultado
+  document.getElementById("seletorMoeda1").selectedIndex = "0"; // seleciona o index 0
+  document.getElementById("seletorMoeda2").selectedIndex = "0";
 }

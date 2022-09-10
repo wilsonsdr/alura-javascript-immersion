@@ -73,6 +73,6 @@ select {
   border-radius: 4px;
 }
 
-#resultado {
+#resultadoMoeda {
   grid-column: 1 / -1;
 }
