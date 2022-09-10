@@ -97,13 +97,49 @@
         </div>
       </div>
 
-      <div class="item quilometros">
-        <h2>Quilometros</h2>
+      <div class="item quilometro">
+        <div>
+          <h2>Quilômetro</h2>
+        </div>
+        <div>
+          <div>
+            <form action="#">
+              <label for="">Valor a ser convertido:</label>
+              <input type="text" name="valor" id="valorQuilometro">
+            </form>
+          </div>
+          <div class="container quilometro">
+            <div>
+              <form action="#">
+                <label>De</label>
+                <select id="seletorQuilometro1">
+                  <option value="km">Quilometros</option>
+                  <option value="metros">Metros</option>
+                  <option value="anosluz">Anos-Luz</option>
+                </select>
+              </form>
+            </div>
+            <div>
+              <form action="#">
+                <label>Para</label>
+                <select id="seletorQuilometro2">
+                  <option value="km">Quilometros</option>
+                  <option value="metros">Metros</option>
+                  <option value="anosluz">Anos-Luz</option>
+                </select>
+              </form>
+            </div>
+            <button class="botao" type="submit" onclick="converterQuilometro()">Converter</button>
+            <button class="botao" type="reset" onclick="resetarQuilometro()">Resetar</button>
+            <h4 class="resultado" id="resultadoQuilometro"></h4>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 
+  <script src="./js/conversorQuilometro.js"></script>
   <script src="./js/conversorTemperatura.js"></script>
   <script src="./js/conversorMoeda.js"></script>
 </body>
