@@ -34,5 +34,5 @@ if (resultado >= 6) {
     conteudo.innerHTML += `<h3>${informe}@imersao-dev-alura<span class="branco">:</span><span class="azul">~</span><span class="branco">$</span><span class="texto">voce foi reprovado</span></h3>`;
 }
 
-conteudo.innerHTML += `<h3>${informe}@imersao-dev-alura<span class="branco">:</span><span class="azul">~</span><span class="branco">$</span><span class="texto">${celsius}ºC equivale a ${conversaoCF}ºF</span></h3>`;
-conteudo.innerHTML += `<h3>${informe}@imersao-dev-alura<span class="branco">:</span><span class="azul">~</span><span class="branco">$</span><span class="texto">${fahrenheit}ºF equivale a ${conversaoFC}ºC</span></h3>`;
+conteudo.innerHTML += `<h3>${informe}@imersao-dev-alura<span class="branco">:</span><span class="azul">~</span><span class="branco">$</span><span class="texto">${celsius}ºC equivale a ${conversaoCF.toFixed(2)}ºF</span></h3>`;
+conteudo.innerHTML += `<h3>${informe}@imersao-dev-alura<span class="branco">:</span><span class="azul">~</span><span class="branco">$</span><span class="texto">${fahrenheit}ºF equivale a ${conversaoFC.toFixed(2)}ºC</span></h3>`;
