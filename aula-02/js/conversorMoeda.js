@@ -10,15 +10,21 @@ function converterMoeda() {
 
   let dolar = 5.15;
   let euro = 5.22;
+  let cifrao
 
   let igual = opcoesMoeda1 == opcoesMoeda2;
   let diferente = opcoesMoeda1 + opcoesMoeda2;
 
+  if (opcoesMoeda2 == "real") {
+    cifrao = "R$";
+  } else if (opcoesMoeda2 == "dolar") {
+    cifrao = "US$";
+  } else {
+    cifrao = "€";
+  }
+
   if (igual == true) {
     igual = valorConversao * 1;
-    document.getElementById(
-      "resultadoMoeda"
-    ).innerHTML = `A conversão de ${opcoesMoeda1} para ${opcoesMoeda2} é de: ${igual}`;
   } else {
     switch (diferente) {
       case "dolarreal":
@@ -40,12 +46,12 @@ function converterMoeda() {
         igual = valorConversao / dolar;
         break;
     }
-    document.getElementById(
-      "resultadoMoeda"
-    ).innerHTML = `A conversão de ${opcoesMoeda1} para ${opcoesMoeda2} é de: ${igual.toFixed(
-      2
-    )}`;
   }
+  document.getElementById(
+    "resultadoMoeda"
+  ).innerHTML = `A conversão de ${opcoesMoeda1} para ${opcoesMoeda2} é de: ${cifrao}${igual.toFixed(
+    2
+  )}`;
 }
 
 function resetarMoeda() {
