@@ -1,4 +1,4 @@
-function converter() {
+function converterMoeda() {
   const valorElemento = document.getElementById("valorMoeda");
   const valorMoeda = valorElemento.value;
   const valorConversao = Number(valorMoeda);
@@ -48,7 +48,7 @@ function converter() {
   }
 }
 
-function resetar() {
+function resetarMoeda() {
   document.getElementById("valorMoeda").value = ""; // deixa a caixa de valor em branco
   document.getElementById("resultadoMoeda").innerHTML = ""; // remove o resultado
   document.getElementById("seletorMoeda1").selectedIndex = "0"; // seleciona o index 0

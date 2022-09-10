@@ -11,7 +11,7 @@
 
 <body>
 
-  <div class="container">
+  <div class="container-principal">
 
     <div>
       <h1 class="subtitulo">Conversor</h1>
@@ -30,7 +30,7 @@
               <input type="text" name="valor" id="valorMoeda">
             </form>
           </div>
-          <div class="conversor-moedas">
+          <div class="container moedas">
             <div>
               <form action="#">
                 <label>De</label>
@@ -51,15 +51,50 @@
                 </select>
               </form>
             </div>
-            <button class="botao" type="submit" onclick="converter()">Converter</button>
-            <button class="botao" type="reset" onclick="resetar()">Resetar</button>
-            <h4 id="resultadoMoeda"></h4>
+            <button class="botao" type="submit" onclick="converterMoeda()">Converter</button>
+            <button class="botao" type="reset" onclick="resetarMoeda()">Resetar</button>
+            <h4 class="resultado" id="resultadoMoeda"></h4>
           </div>
         </div>
       </div>
 
-      <div class="item temperatura">
-        <h2>Temperatura</h2>
+      <div class="item temperaturas">
+        <div>
+          <h2>Temperatura</h2>
+        </div>
+        <div>
+          <div>
+            <form action="#">
+              <label for="">Valor a ser convertido:</label>
+              <input type="text" name="valor" id="valorTemperatura">
+            </form>
+          </div>
+          <div class="container temperaturas">
+            <div>
+              <form action="#">
+                <label>De</label>
+                <select id="seletorTemperatura1">
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="kelvin">Kelvin</option>
+                  <option value="celcius">Celcius</option>
+                </select>
+              </form>
+            </div>
+            <div>
+              <form action="#">
+                <label>Para</label>
+                <select id="seletorTemperatura2">
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="kelvin">Kelvin</option>
+                  <option value="celcius">Celcius</option>
+                </select>
+              </form>
+            </div>
+            <button class="botao" type="submit" onclick="converterTemperatura()">Converter</button>
+            <button class="botao" type="reset" onclick="resetarTemperatura()">Resetar</button>
+            <h4 class="resultado" id="resultadoTemperatura"></h4>
+          </div>
+        </div>
       </div>
 
       <div class="item quilometros">
@@ -69,6 +104,7 @@
     </div>
   </div>
 
+  <script src="./js/conversorTemperatura.js"></script>
   <script src="./js/conversorMoeda.js"></script>
 </body>
 
