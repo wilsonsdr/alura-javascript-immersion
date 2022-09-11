@@ -10,7 +10,11 @@ function converterMoeda() {
 
   let dolar = 5.15;
   let euro = 5.22;
-  let cifrao
+  let bitcoinDolar = 21.6611; // 10-08-2022 20:58
+  let bitcoinEuro = 21.33293; // 10-08-2022 20:58
+  let bitcoinReal = 111.60338; // 10-08-2022 20:58
+
+  let cifrao;
 
   let igual = opcoesMoeda1 == opcoesMoeda2;
   let diferente = opcoesMoeda1 + opcoesMoeda2;
@@ -19,8 +23,10 @@ function converterMoeda() {
     cifrao = "R$";
   } else if (opcoesMoeda2 == "dolar") {
     cifrao = "US$";
-  } else {
+  } else if (opcoesMoeda2 == "euro") {
     cifrao = "€";
+  } else {
+    cifrao = "₿";
   }
 
   if (igual == true) {
@@ -33,11 +39,17 @@ function converterMoeda() {
       case "dolareuro":
         igual = (valorConversao * dolar) / euro;
         break;
+      case "dolarbitcoin":
+        igual = valorConversao * bitcoinDolar;
+        break;
       case "euroreal":
         igual = valorConversao * euro;
         break;
       case "eurodolar":
         igual = (valorConversao * euro) / dolar;
+        break;
+      case "eurobitcoin":
+        igual = valorConversao * bitcoinEuro;
         break;
       case "realeuro":
         igual = valorConversao / euro;
@@ -45,13 +57,26 @@ function converterMoeda() {
       case "realdolar":
         igual = valorConversao / dolar;
         break;
+      case "realbitcoin":
+        igual = valorConversao * bitcoinReal;
+        break;
+      case "bitcoindolar":
+        igual = bitcoinDolar * valorConversao;
+        break;
+      case "bitcoineuro":
+        igual = bitcoinEuro * valorConversao;
+        break;
+      case "bitcoinreal":
+        igual = bitcoinReal * valorConversao;
+        break;
     }
   }
   document.getElementById(
     "resultadoMoeda"
   ).innerHTML = `A conversão de ${opcoesMoeda1} para ${opcoesMoeda2} é de: ${cifrao}${igual.toFixed(
-    2
-  )}`;
+    3
+  )}
+  `;
 }
 
 function resetarMoeda() {
