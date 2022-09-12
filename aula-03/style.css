@@ -32,23 +32,25 @@ body {
   color: #ff0054;
 }
 
-.container-box {
+.box {
   display: grid;
   justify-self: flex-start;
+  align-self: center;
   grid-template-columns: 310px;
+  background-color: #161616;
+  padding: 40px;
+  gap: 10px;
+  border-radius: 4px;
+  font-size: 18px;
 }
 
-.box {
+form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 18px;
-  background-color: #161616;
-  padding: 40px;
-  border-radius: 4px;
 }
 
-input {
+label, input {
   text-align: center;
 }
 
@@ -92,7 +94,7 @@ input {
   #subtitulo {
     text-align: center;
   }
-  .container-box {
+  .box {
     justify-self: center;
     align-self: flex-start;
   }
