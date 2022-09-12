@@ -1,29 +1,32 @@
-tentativas = 3;
-document.getElementById("valorChute").addEventListener("chutar", chutar);
+let tentativas = 3;
+let aleatorio = (Math.random() * 10).toFixed(0);
 
 function chutar() {
   const valorChute = document.getElementById("valorChute");
   const valorElemento = Number(valorChute.value);
-  console.log(typeof valorElemento);
   console.log(valorElemento);
-
-  let aleatorio = (Math.random() * 10).toFixed(0);
   console.log(aleatorio);
 
-  tentativas += -1;
-
   if (valorElemento == aleatorio) {
-    document.getElementById("resposta").innerHTML = `Parabéns, você acertou!! O número era ${aleatorio}`;
+    document.getElementById(
+      "resposta"
+    ).innerHTML = `Parabéns, você acertou!! O número é ${aleatorio}`;
+    document.getElementById("botaoChutar").style.color = "#505050";
+    document.getElementById("botaoResetar").style.color = "#ffffff";
+    document.getElementById("botaoChutar").style.pointerEvents = "none";
+    document.getElementById("botaoResetar").style.pointerEvents = "initial";
   } else if (valorElemento > aleatorio) {
+    tentativas += -1;
     document.getElementById(
       "resposta"
-    ).innerHTML = `O número era menor, tentativas restantes (${tentativas})`;
+    ).innerHTML = `O número é menor, tentativas restantes (${tentativas})`;
   } else if (valorElemento < aleatorio) {
+    tentativas += -1;
     document.getElementById(
       "resposta"
-    ).innerHTML = `O número era maior, tentativas restantes (${tentativas})`;
+    ).innerHTML = `O número é maior, tentativas restantes (${tentativas})`;
   }
-  
+
   if (tentativas == 0) {
     document.getElementById("resposta").innerHTML = "Não foi dessa vez";
     document.getElementById("botaoChutar").style.color = "#505050";
@@ -40,5 +43,6 @@ function resetar() {
   document.getElementById("botaoChutar").style.color = "#ffff";
   document.getElementById("botaoChutar").style.pointerEvents = "initial";
   document.getElementById("botaoResetar").style.pointerEvents = "none";
-  tentativas = 3
+  aleatorio = (Math.random() * 10).toFixed(0);
+  tentativas = 3;
 }
