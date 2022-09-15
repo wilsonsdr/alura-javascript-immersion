@@ -2,18 +2,18 @@
 
 # Descrição do projeto
 
-- Este é o projeto da aula 02 - Imersão Dev da Alura;
+- Este é o projeto da aula 02 - Imersão Dev da Alura
 
-- A ideia do projeto é desenvolver um conversor de moedas, onde você conseguirá converter um valor em Real para Dolar, e vice-versa;
+- A ideia do projeto é desenvolver um conversor de moedas, onde você conseguirá converter um valor em Real para Dolar, e vice-versa
 
-- Todo o foco do projeto é voltado para JavaScript.
+- Todo o foco do projeto é voltado para JavaScript
 
 # Desafio do projeto
 
-- Adicionar outras moedas para converter;
+- Adicionar outras moedas para converter
 
-- Conversor de temperaturas entre Farenheit, Kelvin e Celcius;
+- Conversor de temperaturas entre Farenheit, Kelvin e Celcius
 
-- Conversor de quilômetros para anos luz e verificar o tempo que demora para ir de uma estrela para outra;
+- Conversor de quilômetros para anos luz e verificar o tempo que demora para ir de uma estrela para outra
 
-- Adicionar uma linha ao projeto desenvolvido para que apareça o valor em bitcoin.
+- Adicionar uma linha ao projeto desenvolvido para que apareça o valor em bitcoin
