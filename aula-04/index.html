@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imersão Dev Alura - AluraFlix</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/04738758ea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-subtitulo">
+      <h1>AluraFlix</h1>
+    </div>
+    <nav class="header-menu">
+      <ul class="menu-busca">
+        <i class="fa-light fa fa-magnifying-glass"></i>
+        <li>Buscar</li>
+      </ul>
+      <i class="fa-solid fa-bell"></i>
+      <div class="menu-avatar">
+        <img src="./img/avatar.png" alt="avatar" height="40" width="40">
+        <span id="usuario"></span>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-bg">
+    <div class="container-color">
+      <div class="container-filmes">
+
+        <div class="tipo-filme">
+          <div class="item">
+            <h2 id="acao-subtitulo"></h2>
+            <button id="botao" onclick="adicionarFilmeAcao()" type="button">Adicionar filme</button>
+          </div>
+          <div class="filmes acao">
+          </div>
+        </div>
+
+        <div class="tipo-filme">
+          <div class="item">
+            <h2 id="aventura-subtitulo"></h2>
+            <button id="botao" onclick="adicionarFilmeAcao()" type="button">Adicionar filme</button>
+          </div>
+          <div class="filmes aventura">
+          </div>
+        </div>
+
+        <div class="tipo-filme">
+          <div class="item">
+            <h2 id="comedia-subtitulo"></h2>
+            <button id="botao" onclick="adicionarFilmeAcao()" type="button">Adicionar filme</button>
+          </div>
+          <div class="filmes comedia">
+          </div>
+        </div>
+
+        <div class="tipo-filme">
+          <div class="item">
+            <h2 id="suspense-subtitulo"></h2>
+            <button id="botao" onclick="adicionarFilmeAcao()" type="button">Adicionar filme</button>
+          </div>
+          <div class="filmes suspense">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

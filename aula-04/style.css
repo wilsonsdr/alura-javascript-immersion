@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: url("./fonts/BebasNeue.otf");
+}
+
+:root {
+  --primaria: white;
+  --secundaria: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+/* configurações gerais */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: var(--secundaria);
+}
+
+.header-subtitulo {
+  display: flex;
+  gap: 30px;
+  color: red;
+}
+
+.header-subtitulo h1 {
+  font-size: 48px;
+  letter-spacing: 3px;
+  font-family: "BebasNeue";
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--primaria);
+  gap: 30px;
+}
+
+.menu-busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fa-bell {
+  font-size: 30px;
+}
+
+.menu-avatar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* header */
+
+.container-bg {
+  background: url("https://images5.alphacoders.com/481/481123.jpg") no-repeat center top;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container-color {
+  background-color: RGBA(0, 0, 0, 0.8);
+  min-height: 800px;
+}
+
+.container-filmes {
+  display: flex;
+  flex-direction: column;
+  color: var(--primaria);
+  gap: 20px;
+  padding: 60px 40px;
+}
+
+.tipo-filme {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#botao {
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.filmes {
+  display: flex;
+  overflow-x: scroll;
+  gap: 6px;
+}
+
+.filmes img {
+  width: 300px;
+  height: 280px;
+}
