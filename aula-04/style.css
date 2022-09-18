@@ -6,6 +6,7 @@
 :root {
   --primaria: white;
   --secundaria: black;
+  --destaque: red;
 }
 
 * {
@@ -36,7 +37,7 @@ ul {
 .header-subtitulo {
   display: flex;
   gap: 30px;
-  color: red;
+  color: var(--destaque);
 }
 
 .header-subtitulo h1 {
@@ -72,7 +73,8 @@ ul {
 /* header */
 
 .container-bg {
-  background: url("https://images5.alphacoders.com/481/481123.jpg") no-repeat center top;
+  background: url("https://images5.alphacoders.com/481/481123.jpg") no-repeat
+    center top;
   background-size: cover;
   min-height: 100vh;
 }
@@ -86,7 +88,7 @@ ul {
   display: flex;
   flex-direction: column;
   color: var(--primaria);
-  gap: 20px;
+  gap: 60px;
   padding: 60px 40px;
 }
 
@@ -102,9 +104,16 @@ ul {
   justify-content: space-between;
 }
 
+.container-botoes {
+  display: flex;
+  gap: 10px;
+}
+
 .botao {
   display: inline-block;
   padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .filmes {
@@ -112,11 +121,14 @@ ul {
   gap: 6px;
 }
 
-#acao, #aventura, #comedia, #suspense {
+#acao,
+#aventura,
+#comedia,
+#suspense {
   overflow-x: scroll;
 }
 
 .filmes img {
-  width: 300px;
-  height: 280px;
+  max-width: 300px;
+  max-height: 280px;
 }

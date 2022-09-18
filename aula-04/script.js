@@ -12,6 +12,8 @@ const filmesAventura = document.getElementById("aventura");
 const filmesComedia = document.getElementById("comedia");
 const filmesSuspense = document.getElementById("suspense");
 
+//  array dos filmes
+
 let listaAcao = [
   "https://i.pinimg.com/originals/6e/48/07/6e4807609686cc0fd7659bb904647c26.jpg",
   "https://d128j1v7l5zqm9.cloudfront.net/vibezz_586525933.jpg",
@@ -64,21 +66,37 @@ let listaSuspense = [
   "https://br.web.img2.acsta.net/pictures/14/06/05/17/46/307101.jpg",
 ];
 
+// subtitulo e botões
+
 containerAcao.innerHTML =
   "<h2 id='acao-subtitulo'>Filmes de Ação</h2>" +
-  "<button class='botao' onclick='adicionarFilmeAcao()' type='button'>Adicionar filme</button>";
+  "<div class='container-botoes'>" +
+  "<button class='botao' onclick='adicionarFilmeAcao()' type='button'>Adicionar filme</button>" +
+  "<button class='botao' onclick='removerFilmeAcao()' type='button'>Remover filme</button>" +
+  "</div>";
 
 containerAventura.innerHTML =
   "<h2 id='aventura-subtitulo'>Filmes de Aventura</h2>" +
-  "<button class='botao' onclick='adicionarFilmeAventura()' type='button'>Adicionar filme</button>";
+  "<div class='container-botoes'>" +
+  "<button class='botao' onclick='adicionarFilmeAventura()' type='button'>Adicionar filme</button>" +
+  "<button class='botao' onclick='removerFilmeAventura()' type='button'>Remover filme</button>" +
+  "</div>";
 
 containerComedia.innerHTML =
   "<h2 id='comedia-subtitulo'>Filmes de Comedia</h2>" +
-  "<button class='botao' onclick='adicionarFilmeComedia()' type='button'>Adicionar filme</button>";
+  "<div class='container-botoes'>" +
+  "<button class='botao' onclick='adicionarFilmeComedia()' type='button'>Adicionar filme</button>" +
+  "<button class='botao' onclick='removerFilmeComedia()' type='button'>Remover filme</button>" +
+  "</div>";
 
 containerSuspense.innerHTML =
   "<h2 id='suspense-subtitulo'>Filmes de Suspense</h2>" +
-  "<button class='botao' onclick='adicionarFilmeSuspense()' type='button'>Adicionar filme</button>";
+  "<div class='container-botoes'>" +
+  "<button class='botao' onclick='adicionarFilmeSuspense()' type='button'>Adicionar filme</button>" +
+  "<button class='botao' onclick='removerFilmeSuspense()' type='button'>Remover filme</button>" +
+  "</div>";
+
+// adicionando cada elemento da array 
 
 listaAcao.forEach((listaAcao) => {
   filmesAcao.innerHTML += ' <img src=" ' + listaAcao + ' " ' + " > ";
@@ -96,6 +114,8 @@ listaSuspense.forEach((listaSuspense) => {
   filmesSuspense.innerHTML += ' <img src=" ' + listaSuspense + ' " ' + " > ";
 });
 
+// função adicionar filme
+
 function adicionarFilmeAcao() {
   let novoFilmeAcao = prompt("URL do Filme");
   for (const filmeAcaoExistente of listaAcao) {
@@ -106,7 +126,8 @@ function adicionarFilmeAcao() {
   }
   if (novoFilmeAcao.endsWith(".jpg")) {
     listaAcao.push(novoFilmeAcao);
-    filmesAcao.innerHTML += ' <img src=" ' + novoFilmeAcao + ' " ' + " > ";
+    filmesAcao.innerHTML +=
+      ' <img src=" ' + novoFilmeAcao + ' " ' + " > ";
     alert("Filme inserido!");
     return;
   } else {
@@ -168,5 +189,51 @@ function adicionarFilmeSuspense() {
     return;
   } else {
     alert("Insira URL válido!");
+  }
+}
+
+// função remover filme
+
+function removerFilmeAcao() {
+  filmesAcao.lastChild.remove();
+  if (!listaAcao.length) {
+    alert("Sem filmes para remover");
+    return;
+  } else {
+    filmesAcao.lastChild.remove();
+    listaAcao.pop();
+  }
+}
+
+function removerFilmeAventura() {
+  filmesAventura.lastChild.remove();
+  if (!listaAventura.length) {
+    alert("Sem filmes para remover");
+    return;
+  } else {
+    filmesAventura.lastChild.remove();
+    listaAventura.pop();
+  }
+}
+
+function removerFilmeComedia() {
+  filmesComedia.lastChild.remove();
+  if (!listaComedia.length) {
+    alert("Sem filmes para remover");
+    return;
+  } else {
+    filmesComedia.lastChild.remove();
+    listaComedia.pop();
+  }
+}
+
+function removerFilmeSuspense() {
+  filmesSuspense.lastChild.remove();
+  if (!listaSuspense.length) {
+    alert("Sem filmes para remover");
+    return;
+  } else {
+    filmesSuspense.lastChild.remove();
+    listaSuspense.pop();
   }
 }
