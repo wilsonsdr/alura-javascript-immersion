@@ -90,27 +90,30 @@ ul {
   padding: 60px 40px;
 }
 
-.tipo-filme {
+.container-filme {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.item {
+.container-subtitulo {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#botao {
+.botao {
   display: inline-block;
   padding: 4px 8px;
 }
 
 .filmes {
   display: flex;
-  overflow-x: scroll;
   gap: 6px;
+}
+
+#acao, #aventura, #comedia, #suspense {
+  overflow-x: scroll;
 }
 
 .filmes img {
