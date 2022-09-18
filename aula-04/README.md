@@ -1,4 +1,4 @@
-![Screenshot from 2022-09-18 13-38-37](https://user-images.githubusercontent.com/81364355/190918262-d51deddf-7c13-4592-a0fd-16ba7d2133db.png)
+![Screenshot from 2022-09-18 17-43-11](https://user-images.githubusercontent.com/81364355/190927425-c080b635-f2ba-4e25-84bd-f2489b05a368.png)
 
 # Descrição do projeto
 
@@ -17,3 +17,5 @@
 - Criar uma condição para não adicionar filmes repetidos, caso eles já tenham sido adicionados anteriormente
 
 - Criar um campo e botão para adicionar a imagem pela tela, e não direto no código
+
+- Criar um botão para remover filme da tela
