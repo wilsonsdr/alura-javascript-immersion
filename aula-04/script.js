@@ -98,68 +98,75 @@ listaSuspense.forEach((listaSuspense) => {
 
 function adicionarFilmeAcao() {
   let novoFilmeAcao = prompt("URL do Filme");
-  if (novoFilmeAcao == null) {
-    alert("Filme não inserido!");
-    return;
-  }
   for (const filmeAcaoExistente of listaAcao) {
     if (novoFilmeAcao == filmeAcaoExistente) {
       alert("Filme já existente!");
       return;
-    } else listaAcao.push(novoFilmeAcao);
+    }
+  }
+  if (novoFilmeAcao.endsWith(".jpg")) {
+    listaAcao.push(novoFilmeAcao);
     filmesAcao.innerHTML += ' <img src=" ' + novoFilmeAcao + ' " ' + " > ";
     alert("Filme inserido!");
     return;
+  } else {
+    alert("Insira URL válido!");
   }
 }
 
 function adicionarFilmeAventura() {
   let novoFilmeAventura = prompt("URL do Filme");
-  if (novoFilmeAventura == null) {
-    alert("Filme não inserido!");
-    return;
-  }
   for (const filmeAventuraExistente of listaAventura) {
     if (novoFilmeAventura == filmeAventuraExistente) {
       alert("Filme já existente!");
       return;
-    } else listaAventura.push(novoFilmeAventura);
-    filmesAventura.innerHTML += ' <img src=" ' + novoFilmeAventura + ' " ' + " > ";
+    }
+  }
+  if (novoFilmeAventura.endsWith(".jpg")) {
+    listaAventura.push(novoFilmeAventura);
+    filmesAventura.innerHTML +=
+      ' <img src=" ' + novoFilmeAventura + ' " ' + " > ";
     alert("Filme inserido!");
     return;
+  } else {
+    alert("Insira URL válido!");
   }
 }
 
 function adicionarFilmeComedia() {
   let novoFilmeComedia = prompt("URL do Filme");
-  if (novoFilmeComedia == null) {
-    alert("Filme não inserido!");
-    return;
-  }
   for (const filmeComediaExistente of listaComedia) {
     if (novoFilmeComedia == filmeComediaExistente) {
       alert("Filme já existente!");
       return;
-    } else listaComedia.push(novoFilmeComedia);
-    filmesComedia.innerHTML += ' <img src=" ' + novoFilmeComedia + ' " ' + " > ";
+    }
+  }
+  if (novoFilmeComedia.endsWith(".jpg")) {
+    listaComedia.push(novoFilmeComedia);
+    filmesComedia.innerHTML +=
+      ' <img src=" ' + novoFilmeComedia + ' " ' + " > ";
     alert("Filme inserido!");
     return;
+  } else {
+    alert("Insira URL válido!");
   }
 }
 
 function adicionarFilmeSuspense() {
   let novoFilmeSuspense = prompt("URL do Filme");
-  if (novoFilmeSuspense == null) {
-    alert("Filme não inserido!");
-    return;
-  }
   for (const filmeSuspenseExistente of listaSuspense) {
     if (novoFilmeSuspense == filmeSuspenseExistente) {
       alert("Filme já existente!");
       return;
-    } else listaSuspense.push(novoFilmeSuspense);
-    filmesSuspense.innerHTML += ' <img src=" ' + novoFilmeSuspense + ' " ' + " > ";
+    }
+  }
+  if (novoFilmeSuspense.endsWith(".jpg")) {
+    listaSuspense.push(novoFilmeSuspense);
+    filmesSuspense.innerHTML +=
+      ' <img src=" ' + novoFilmeSuspense + ' " ' + " > ";
     alert("Filme inserido!");
     return;
+  } else {
+    alert("Insira URL válido!");
   }
 }
