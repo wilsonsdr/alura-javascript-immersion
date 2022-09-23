@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imersão Dev Alura - Tabela de Classificação</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/04738758ea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container-bg">
+    <div class="container-color">
+      <div class="container-principal">
+        <h1>Tabela de classificação de Truco</h1>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Marcador de Pontos</th>
+              <th>Nomes das Duplas</th>
+              <th>Vitórias</th>
+              <th>Derrotas</th>
+              <th>Pontuação</th>
+              <th colspan="3">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button onclick="umPontoDeCima()" class="plus">+1</button></td>
+              <td><i class="fa-solid fa-circle-plus" onclick="pontosDeCima()"></i></td>
+              <td>Wilson e Wellington</td>
+              <td id="vitoriaDeCima">0</td>
+              <td id="derrotaDeCima">0</td>
+              <td id="pontuacaoDeCima">0</td>
+              <td><button id="trucarDeCima" class="botao-primario trucar" onClick="trucarDeCimaFuncao()">Trucar</button></td>
+              <td><button id="aceitarDeCima" class="botao-primario aceitar" onClick="aceitarDeCimaFuncao()">Aceitar</button></td>
+              <td><button id="correrDeCima" class="botao-primario correr" onClick="correrDeCimaFuncao()">Correr</button></td>
+            </tr id="duplaDeBaixo">
+            <tr>
+              <td><button class="plus" onclick="umPontoDeBaixo()"">+1</button></td>
+              <td><i class="fa-solid fa-circle-plus" onclick="pontosDeBaixo()"></i></td>
+              <td id="segundaDupla"></td>
+              <td id="vitoriaDeBaixo">0</td>
+              <td id="derrotaDeBaixo">0</td>
+              <td id="pontuacaoDeBaixo">0</td>
+              <td><button id="trucarDeBaixo" class="botao-primario trucar" onClick="trucarDeBaixoFuncao()">Trucar</button></td>
+              <td><button id="aceitarDeBaixo" class="botao-primario aceitar" onClick="aceitarDeBaixoFuncao()">Aceitar</button></td>
+              <td><button id="correrDeBaixo" class="botao-primario correr" onClick="correrDeBaixoFuncao()">Correr</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="extra">
+          <div class="adicionar-duplas">
+            <input id="insira" type="text" placeholder="Insira o nome da segunda dupla">
+            <button class="botao-secundario" onclick="exibirSegundaDupla()">Confirmar</button>
+          </div>
+          <button class="botao-secundario" onclick="zerarPlacar()">Zerar Placar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
