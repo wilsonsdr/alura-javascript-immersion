@@ -139,10 +139,8 @@ function sortearCarta() {
   }
 
   cartaJogador = cartas[numeroCartaJogador];
-  console.log(tentativas);
-
   exibirOpcoes();
-  exibirCartaJogador();
+  exibirCarta("Jogador");
 }
 
 function exibirOpcoes() {
@@ -151,9 +149,15 @@ function exibirOpcoes() {
 
   for (let atributo in cartaJogador.atributos) {
     opcoesTexto +=
-      `<input type="radio" name="atributo" value="${atributo}">` + atributo;
+      `<input type="radio" id="ataque" name="atributo" value="${atributo}">` +
+      atributo;
+    `<input type="radio" name="atributo" value="${atributo}">` + atributo;
+    `<input type="radio" name="atributo" value="${atributo}">` + atributo;
   }
   opcoes.innerHTML = opcoesTexto;
+
+  let ataque = document.getElementById("ataque");
+  ataque.checked = true;
 }
 
 function obterAtributo() {
@@ -186,7 +190,15 @@ function jogar() {
   document.getElementById("btnSortear").style.background = "white";
   document.getElementById("btnSortear").style.color = "black";
 
-  exibirCartaMaquina();
+  exibirCarta("Maquina");
+}
+
+function exibirCarta(parametro) {
+  if (parametro === "Jogador") {
+    exibirCartaJogador();
+  } else if (parametro === "Maquina") {
+    exibirCartaMaquina();
+  }
 }
 
 function exibirCartaJogador() {
