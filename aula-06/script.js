@@ -114,9 +114,14 @@ cartas = [
 
 let cartaMaquina;
 let cartaJogador;
+let tentativas = 4;
 
 function sortearCarta() {
+  tentativas--;
   document.getElementById("escolha").innerHTML = "Escolha o seu atributo";
+  document.getElementById(
+    "btnSortear"
+  ).innerHTML = `Sortear Carta (${tentativas})`;
   document.getElementById("btnSortear").style.background = "white";
   document.getElementById("btnSortear").style.color = "black";
   let numeroCartaMaquina = parseInt(Math.random() * 10);
@@ -126,11 +131,15 @@ function sortearCarta() {
   while (numeroCartaMaquina == numeroCartaJogador) {
     numeroCartaJogador = parseInt(Math.random() * 10);
   }
-  cartaJogador = cartas[numeroCartaJogador];
-  console.log(cartaJogador);
+  if (tentativas == 0) {
+    document.getElementById(
+      "btnSortear"
+    ).innerHTML = `Acabaram suas tentativas`;
+    document.getElementById("btnSortear").disabled = true;
+  }
 
-  document.getElementById("btnSortear").disabled = true;
-  document.getElementById("btnJogar").disabled = false;
+  cartaJogador = cartas[numeroCartaJogador];
+  console.log(tentativas);
 
   exibirOpcoes();
   exibirCartaJogador();
@@ -158,20 +167,25 @@ function obterAtributo() {
 }
 
 function jogar() {
+  document.getElementById("escolha").innerHTML =
+    "E necessario sortear uma carta";
+  document.getElementById("btnSortear").style.background = "#a90000";
+  document.getElementById("btnSortear").style.color = "white";
   let atributoSelecionado = obterAtributo();
   let elementoResultado = document.getElementById("resultado");
   let valorCartaJogador = cartaJogador.atributos[atributoSelecionado];
   let valorCartaMaquina = cartaMaquina.atributos[atributoSelecionado];
 
   if (valorCartaJogador > valorCartaMaquina) {
-    elementoResultado.innerHTML = `<h3>Voce venceu! Worororo!</h3> <button>Resetar</button>`;
+    elementoResultado.innerHTML = `<h3>Voce venceu! Worororo!</h3>`;
   } else if (valorCartaMaquina > valorCartaJogador) {
-    elementoResultado.innerHTML = `<h3>Voce perdeu! Shishishi!</h3> <button>Resetar</button>`;
-  } else
-    elementoResultado.innerHTML = `<h3>Empatou! Shurororo!</h3> <button>Resetar</button>`;
+    elementoResultado.innerHTML = `<h3>Voce perdeu! Shishishi!</h3>`;
+  } else elementoResultado.innerHTML = `<h3>Empatou! Shurororo!</h3>`;
 
-  console.log(cartaJogador);
-  console.log(cartaMaquina);
+  document.getElementById("escolha").innerHTML = "Escolha o seu atributo";
+  document.getElementById("btnSortear").style.background = "white";
+  document.getElementById("btnSortear").style.color = "black";
+
   exibirCartaMaquina();
 }
 
