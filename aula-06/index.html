@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imersão Dev Alura - Super Trunfo</title>
+  <link rel="stylesheet" href="/aula-06/style.css">
+  <script src="./script.js"></script>
+  <link href="http://fonts.cdnfonts.com/css/manga-temple" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="conteudo-principal">
+      <h1 class="subtitulo">Super Trunfo do One Piece</h1>
+
+      <button onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
+
+      <form id="form">
+        <h2 id="escolha">Escolha o seu atributo</h2>
+        <div class="opcoes" id="opcoes"></div>
+        <button type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
+        <div id="container-cartas">
+          <div id="container-jogador"></div>
+          <div id="container-maquina"></div>
+        </div>
+        <div id="container-info">
+          <div id="atributo-jogador"></div>
+          <div id="atributo-maquina"></div>
+        </div>
+        <div id="resultado"></div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
