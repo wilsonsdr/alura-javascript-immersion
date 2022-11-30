@@ -131,11 +131,10 @@ function sortearCarta() {
   while (numeroCartaMaquina == numeroCartaJogador) {
     numeroCartaJogador = parseInt(Math.random() * 10);
   }
+
   if (tentativas == 0) {
-    document.getElementById(
-      "btnSortear"
-    ).innerHTML = `Acabaram suas tentativas`;
-    document.getElementById("btnSortear").disabled = true;
+    document.getElementById("btnSortear").innerHTML = `Acabaram suas cartas`;
+    document.getElementById("btnSortear").style.pointerEvents = "none";
   }
 
   cartaJogador = cartas[numeroCartaJogador];
@@ -189,6 +188,14 @@ function jogar() {
   document.getElementById("escolha").innerHTML = "Escolha o seu atributo";
   document.getElementById("btnSortear").style.background = "white";
   document.getElementById("btnSortear").style.color = "black";
+
+  if (tentativas == 0) {
+    tentativas = 4;
+    document.getElementById("btnSortear").style.background = "#a90000";
+    document.getElementById("btnSortear").style.color = "white";
+    document.getElementById("btnSortear").innerHTML = `Jogar novamente`;
+    document.getElementById("btnSortear").style.pointerEvents = "initial";
+  }
 
   exibirCarta("Maquina");
 }

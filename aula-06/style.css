@@ -6,11 +6,8 @@
 }
 
 body {
-  background-image: url("./img/one-piece.png");
+  background: url("./img/one-piece.png") no-repeat center;
   background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  min-height: 720px;
   font-size: 12px;
 }
 
@@ -20,7 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 720px;
+  min-height: 100vh;
 }
 
 .conteudo-principal {
@@ -41,6 +38,7 @@ body {
 }
 
 button {
+  display: inline-block;
   padding: 0.8rem 1.5rem;
   margin: 1rem 0;
   border-radius: 5px;
