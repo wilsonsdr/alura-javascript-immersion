@@ -17,6 +17,7 @@ body {
   justify-items: center;
   gap: 40px;
   height: 100vh;
+  padding: 40px;
 }
 
 .container-subtitulo {
@@ -76,13 +77,8 @@ label, input {
   color: #505050;
 }
 
-@media (max-width: 900px) {
-  #subtitulo {
-    font-size: 4.5em;
-  }
-}
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .container {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -97,5 +93,27 @@ label, input {
   .box {
     justify-self: center;
     align-self: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  #subtitulo {
+    font-size: 4.5em;
+  }
+}
+
+@media (max-width: 500px) {
+  #subtitulo {
+    font-size: 3.5em;
+  }
+
+  .box {
+    grid-template-columns: 250px;
+  }
+}
+
+@media (max-width: 440px) {
+  .box {
+    grid-template-columns: 210px;
   }
 }

@@ -1,7 +1,3 @@
-const informar = prompt("Seja muito bem vindo(a), qual o seu nome?");
-const usuario = document.getElementById("usuario");
-usuario.innerHTML = informar;
-
 const containerAcao = document.getElementById("container-acao");
 const containerAventura = document.getElementById("container-aventura");
 const containerComedia = document.getElementById("container-comedia");

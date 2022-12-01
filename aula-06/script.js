@@ -137,6 +137,7 @@ function sortearCarta() {
     document.getElementById("btnSortear").style.pointerEvents = "none";
   }
 
+
   cartaJogador = cartas[numeroCartaJogador];
   exibirOpcoes();
   exibirCarta("Jogador");
@@ -191,8 +192,6 @@ function jogar() {
 
   if (tentativas == 0) {
     tentativas = 4;
-    document.getElementById("btnSortear").style.background = "#a90000";
-    document.getElementById("btnSortear").style.color = "white";
     document.getElementById("btnSortear").innerHTML = `Jogar novamente`;
     document.getElementById("btnSortear").style.pointerEvents = "initial";
   }
