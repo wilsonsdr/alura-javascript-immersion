@@ -1,3 +1,1 @@
-# Descrição do projeto
-
-Este repositório é para guardar os códigos realizados durante a Imersão JavaScript Alura
+This repository is for storing the of the Alura JavaScript Immersion.
